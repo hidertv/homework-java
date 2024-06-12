@@ -30,8 +30,8 @@ jobs:
     - name: chmod
       run: "chmod 755 ./mvnw"
 
-#    - name: ./mvnw
-#      run: "./mvnw clean package"
+    - name: ./mvnw
+      run: "./mvnw clean package"
 
     - run: ls -al
 
