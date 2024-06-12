@@ -1,0 +1,34 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - main
+      - jenk
+  workflow_dispatch:
+
+jobs:
+  my_first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: install checkout@v4
+      uses: actions/checkout@v4
+
+    - name: set up Java 18 Zulu
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '18'
+        
+    - name: show java version
+      run: "java -version"
+
+    - name: chmod
+      run: "chmod 755 ./mvnw"
+
+    - name: ./mvnw
+      run: "./mvnw"
+
+    - run: ls -al
+
+      
