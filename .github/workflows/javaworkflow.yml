@@ -14,22 +14,17 @@ jobs:
     - name: install checkout@v4
       uses: actions/checkout@v4
 
-    - name: set up Java 18 Zulu
+    - name: set up Java 17 Zulu
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
-        java-version: '18'
-        cache: 'maven'
-        cache-dependency-path: 'pom.xml'
+        java-version: '17'
         
     - name: show java version
       run: "java -version"
 
     - name: chmod
       run: "chmod 755 ./mvnw"
-
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
 
     - name: ./mvnw
       run: "./mvnw clean package"
