@@ -20,7 +20,7 @@ jobs:
         distribution: 'zulu'
         java-version: '18'
         cache: 'maven'
-        cache-dependency-path: 'homework-java/pom.xml'
+        cache-dependency-path: 'pom.xml'
         
     - name: show java version
       run: "java -version"
