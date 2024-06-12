@@ -24,6 +24,9 @@ jobs:
     - name: show java version
       run: "java -version"
 
+    - name: show maven
+      run: "mvn -version"
+
     - name: chmod
       run: "chmod 755 ./mvnw"
 
