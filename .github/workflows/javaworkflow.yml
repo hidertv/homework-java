@@ -25,7 +25,7 @@ jobs:
       run: "java -version"
 
     - name: show maven
-      run: "mvn -version"
+      run: "mvn -N io.takari:maven:wrapper"
 
     - name: chmod
       run: "chmod 755 ./mvnw"
