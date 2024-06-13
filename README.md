@@ -1,4 +1,7 @@
 ## Prerequisites:
+
+![](https://github.com/hidertv/homework-java/actions/workflows/javaworkflow.yml/badge.svg)
+
 - Java JDK version 17+ should be installed in the system
 
 Check it here https://www.oracle.com/java/technologies/downloads/#java17
