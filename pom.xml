@@ -33,13 +33,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.1.0</version>
         </dependency>
-
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -63,6 +61,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <mainClass>softserve.academy.simplecrud.Application</mainClass> <!-- Replace with your actual main class -->
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -73,5 +72,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
