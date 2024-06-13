@@ -1,38 +1,37 @@
-name: Continuous Integration
+name: Java homework
+
 on:
   push:
-    branches:
-      - main
-      - jenk
+    branches: [ "main" ]
+  pull_request:
+    types: [opened, synchronize]
   workflow_dispatch:
-
+  
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
 
     steps:
-    - name: install checkout@v4
+    - name: code check
       uses: actions/checkout@v4
 
-    - name: set up Java 17 Zulu
+    - name: set up Java 17 Temurin
       uses: actions/setup-java@v4
       with:
-        distribution: 'zulu'
+        distribution: 'temurin'
         java-version: '17'
         cache: 'maven'
         
     - name: show java version
       run: "java -version"
 
-    - name: show maven
-      run: "mvn -N io.takari:maven:wrapper"
+    - run: "ls -al"
 
-    - name: chmod
-      run: "chmod 755 ./mvnw"
+    - name: build 
+      run: "mvn -B package --file pom.xml"
 
-    - name: ./mvnw
-      run: "./mvnw clean package"
+    - name: Run tests
+      run: "mvn test"
 
-    - run: ls -al
 
       
