@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
   
 jobs:
-  my_first_job:
-    runs-on: ubuntu-latest
+  build_test:
+    runs-on: ubuntu-22.04
 
     steps:
     - name: code check
@@ -20,17 +20,12 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-        
-    - name: show java version
-      run: "java -version"
-
-    - run: "ls -al"
 
     - name: build 
-      run: "mvn -B package --file pom.xml"
+      run: mvn -B package --file pom.xml
 
     - name: Run tests
-      run: "mvn test"
+      run: mvn test
 
 
       
