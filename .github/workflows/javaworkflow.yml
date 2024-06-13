@@ -26,6 +26,7 @@ jobs:
 
     - name: Run tests
       run: mvn test
-    - run: ls -al
+    - run: java -jar ./target/*.jar --server.port=8080
+    - run: curl -s 'http://localhost:8080/actuator/health'
 
       
