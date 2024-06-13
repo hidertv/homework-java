@@ -61,7 +61,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>softserve.academy.simplecrud.Application</mainClass> <!-- Replace with your actual main class -->
+                    <mainClass>softserve.academy.simplecrud.Application</mainClass> <!-- Замість цього використовуйте фактичне ім'я головного класу -->
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -72,4 +72,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
