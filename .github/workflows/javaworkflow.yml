@@ -26,6 +26,6 @@ jobs:
 
     - name: Run tests
       run: mvn test
-
+    - run: ls -al
 
       
